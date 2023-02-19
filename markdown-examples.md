@@ -50,3 +50,8 @@ Some fruits that I know:
 1. Bananas
 1. Kiwis
 1. Mangoes
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| data | data | data |
+| data 2 | data 2 | data 2 |
