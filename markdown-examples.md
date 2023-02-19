@@ -1,10 +1,10 @@
 # Heading 1
 
-**Bold text for emphasis**
-_Italic text for different emphasis_
-~~Nothing to see here~~
-**Bold and italic for _extreme_ emphasis**
-***The most emphasis!***
+**Bold text for emphasis**  
+_Italic text for different emphasis_  
+~~Nothing to see here~~  
+**Bold and italic for _extreme_ emphasis**  
+***The most emphasis!***  
 <sub>Little subscript now</sub>
 
 ## Heading 2
