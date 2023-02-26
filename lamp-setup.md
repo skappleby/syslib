@@ -99,7 +99,7 @@ print_r($browser);
 </html>
 ```
 
-### Step 4: MySQL
+### Step 3: MySQL
 
 _A note to pay attention to the difference in prompts between MySQL and Linux. I'll use > to indicate a mysql command prompt. Check that syntax carefully in MySQL! Don't forget to end commands with `;`!_
 
