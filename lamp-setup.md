@@ -98,3 +98,30 @@ print_r($browser);
 </body>
 </html>
 ```
+
+### Step 4: MySQL
+
+_A note to pay attention to the difference in prompts between MySQL and Linux. I'll use > to indicate a mysql command prompt. Check that syntax carefully in MySQL! Don't forget to end commands with `;`!_
+
+1. Install and set up MySQL
+	- locate and install: `sudo apt install mysql-server`
+	- make sure it's running: `systemctl status mysql`
+	- log in to the database to test as the root Linux user: `sudo su`
+		- _be careful when doing anything as the root user lest you eff it all up!_
+		- as root user, run `mysql -u root`
+2. Create a regular user account (I created user1), set up practice database, grant user privileges
+	- `create user 'user1'@'localhost' identified by 'PASSWORD';`
+		- should return Query OK message
+	- create practice database called opacdb: `create database opacdb;`
+	- grant all privileges to user1: `grant all privileges on opacdb.* to 'user1'@'localhost';
+	- run `show databases;` to make sure opacdb is there
+	- exit MySQL as root user with `\q` then exit out of root Linux user with `exit`
+3. Log in and make some tables
+```
+mysql -u user1 -p
+> show databases;
+> use opacdb; 
+```
+	- refer to [Section 5.3 in Dr. Burns' handbook](https://cseanburns.net/WWW/systems-librarianship/16-installing-configuring-mysql.html) for examples of using **insert, alter, select, describe, delete**
+	- use this data (or similar) to construct the table **and remember to pay attention to your syntax**
+	
