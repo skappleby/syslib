@@ -56,7 +56,8 @@ Press **y** when prompted
 	- create a small php file in the web document root to make sure it's installed properly
 		- `cd /var/www/html/` to get to web document directory
 		- `sudo nano info.php` to create the info.php file
-		- text for php file: ```
+		- text for php file:
+```
 <?php
 phpinfo();
 ?>
