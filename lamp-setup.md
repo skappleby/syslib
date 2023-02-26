@@ -1,3 +1,4 @@
+
 # LAMP Setup
 
 **Notes on installing and configuing Apache, PHP, and MySQL on a Linux server**
@@ -6,13 +7,13 @@
 
 _Assignment Week 7_
 
-## Step 1: Apache
+### Step 1: Apache
 
-1. Gotta update
+Before install, update system:
 ```
 sudo apt upgrade
 ```
-Press y
+Press **y** when prompted
 
 1. Install Apache2 using `apt`
 	- use `sudo apt search apache2 | head`
@@ -24,3 +25,22 @@ Press y
 	- use `systemctl` to ensure apache2 is enabled and running
 		- `systemctl list-unit-files apache2.service` command output shows apache2 is enabled
 		- `systemctl status apache2` command output shows that apache2 is active
+1. Install command line web browser and check default apache2 web page
+	- `sudo apt install w3m` to install w3m as the browser
+	- use loopback IP address to visit default site: `w3m localhost`
+	- if it worked right, you should see **It works!** near the top of the screen
+	- to exit `w3m`: **q** then **y**
+	- we can also check in a regular web browser by using public IP address
+		- find this on **Google Cloud Console > Compute Engine > VM instances** and click **External IP**
+		- it's the same IP we use when we start PuTTY
+		- if browser defaults to **https://** just make sure we type **http://**IP-ADDRESS to get it to work
+1. Make a web page
+	- navigate to the location of the document root of the default site: `cd /var/www/html/`
+	- `ls` to see that there is an index.html file already; that's the apache2 default page
+	- we renamed the original index file index.html.original and created a new one
+		- to rename: `sudo mv index.html index.html.original`
+		- to create the new index file: sudo nano index.html
+		- add whatever html code in nano; for this exercise I copied and pasted the basic code from Dr. Burns' handbook
+		-_note that we use `sudo` because we are outside the home directory, so be careful about running commands
+	- reload the page or type external IP in the broswer URL to see the new page
+		- to see the previous index page that we renamed, type **http://IP-ADDRESS/index.html.original
