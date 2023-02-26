@@ -117,11 +117,8 @@ _A note to pay attention to the difference in prompts between MySQL and Linux. I
 	- run `show databases;` to make sure opacdb is there
 	- exit MySQL as root user with `\q` then exit out of root Linux user with `exit`
 3. Log in and make some tables
-```
-mysql -u user1 -p
-> show databases;
-> use opacdb; 
-```
-	- refer to [Section 5.3 in Dr. Burns' handbook](https://cseanburns.net/WWW/systems-librarianship/16-installing-configuring-mysql.html) for examples of using **insert, alter, select, describe, delete**
+	- to log in: `mysql -u user1 -p` then enter password
+		- the cursor won't move... don't be alarmed
+	- refer to [Section 5.3 in Dr. Burns' handbook](https://cseanburns.net/WWW/systems-librarianship/16-installing-configuring-mysql.html) for examples of using **create, insert, alter, select, describe, delete**
 	- use this data (or similar) to construct the table **and remember to pay attention to your syntax**
 	
