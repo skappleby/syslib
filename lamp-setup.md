@@ -55,12 +55,46 @@ Press **y** when prompted
 2. Check install
 	- create a small php file in the web document root to make sure it's installed properly
 		- `cd /var/www/html/` to get to web document directory
-		- `sudo nano info.php` to create the info.php file
-		- text for php file:
+		- `sudo nano info.php` to create the info.php file (see below for file text)
+		- open file using  external IP address to view the system information: **http://IP-ADDRESS/info.php**
+3. Modfy basic configurations
+	- if we want apache2 to default to index.php instead of index.html, we need to configure that in the dir.conf file in **/etc/apache2/mods-enabled/**
+	- navigate to /etc/apache2/mods-enabled/
+	- create a backup of dir.conf before making modifications: `sudo cp dir.conf dir.conf.bak`
+	- modify the dir.conf file: `sudo nano dir.conf` 
+		- change the DirectoryIndex line to read: `DirectoryIndex index.php index.html index.pl index.xhtml index.htm`
+		- we moved index.php ahead of index.html and deleted index.php in its old position, so apache2 will serve index.php by default first
+	- use `apachectl configtest` to check configuration
+		- should get **Syntax OK** message
+	- reload: `sudo systemctl reload apache2`
+	- restart: `sudo systemctl restart apache2`
+4. Create index.php file
+	- navigate back to apache2 document  root directory: `cd /var/www/html/`
+	- create an index.php file: `sudo nano index.php` (see below for code text)
+	- visit external IP address in browser to see index.php returned
+
+_text for info.php file_
 ```
 <?php
 phpinfo();
 ?>
 ```
-		- open file using  external IP address to view the system information: **http://IP-ADDRESS/info.php**
 
+_text code for index.php file_
+```
+<html>
+<head>
+<title>Broswer Detector</title>
+</head>
+<body>
+<p>You are using the following browser to view this site:</p>
+
+<?php
+echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+
+$browser = get_browser(null, true);
+print_r($browser);
+?>
+</body>
+</html>
+```
