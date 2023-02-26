@@ -43,4 +43,23 @@ Press **y** when prompted
 		- add whatever html code in nano; for this exercise I copied and pasted the basic code from Dr. Burns' handbook
 		-_note that we use `sudo` because we are outside the home directory, so be careful about running commands
 	- reload the page or type external IP in the broswer URL to see the new page
-		- to see the previous index page that we renamed, type **http://IP-ADDRESS/index.html.original
+		- to see the previous index page that we renamed, type **http://IP-ADDRESS/index.html.original**
+
+### Step 2: PHP
+
+1. Install PHP
+	- use `apt install` to install PHP and modules: `sudo apt install php libapache2-mod-php`
+		- running `apt show php` and `apt show libapache2-mod-php` gives more information about each package
+	- restart apache 2: `sudo systemctl status restart apache2`
+	- check status for errors: `systemctl status apache2`
+2. Check install
+	- create a small php file in the web document root to make sure it's installed properly
+		- `cd /var/www/html/` to get to web document directory
+		- `sudo nano info.php` to create the info.php file
+		- text for php file: ```
+<?php
+phpinfo();
+?>
+```
+		- open file using  external IP address to view the system information: **http://IP-ADDRESS/info.php**
+
