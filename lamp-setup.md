@@ -110,15 +110,52 @@ _A note to pay attention to the difference in prompts between MySQL and Linux. I
 		- _be careful when doing anything as the root user lest you eff it all up!_
 		- as root user, run `mysql -u root`
 2. Create a regular user account (I created user1), set up practice database, grant user privileges
-	- `create user 'user1'@'localhost' identified by 'PASSWORD';`
+	- `> create user 'user1'@'localhost' identified by 'PASSWORD';`
 		- should return Query OK message
-	- create practice database called opacdb: `create database opacdb;`
-	- grant all privileges to user1: `grant all privileges on opacdb.* to 'user1'@'localhost';
-	- run `show databases;` to make sure opacdb is there
+	- create practice database called opacdb: `> create database opacdb;`
+	- grant all privileges to user1: `grant all privileges on opacdb.* to 'user1'@'localhost';`
+	- run `> show databases;` to make sure opacdb is there
 	- exit MySQL as root user with `\q` then exit out of root Linux user with `exit`
 3. Log in and make some tables
 	- to log in: `mysql -u user1 -p` then enter password
 		- the cursor won't move... don't be alarmed
 	- refer to [Section 5.3 in Dr. Burns' handbook](https://cseanburns.net/WWW/systems-librarianship/16-installing-configuring-mysql.html) for examples of using **create, insert, alter, select, describe, delete**
 	- use this data (or similar) to construct the table **and remember to pay attention to your syntax**
-	
+	- `> \q` to quit MySQL
+1. Install PHP and MySQL support
+	- install some modules to establish the connection between PHP and My SQL: `sudo apt install php-mysql php-mysqli`
+	- restart apache2: `sudo systemctl restart apache2`
+	- restart MySQL: `sudo systemctl restart mysql`
+	- create a login.php file in /var/www/html so that PHP can authenticate when connecting to MySQL and change permissions so that the file can only be read by the apache2 server (see code below)
+	- open login.php to add credentials: `sudo nano login.php` then enter credentials shown below.
+	- create a new php file: `sudo nano opac.php`
+		- copied the opac.php code from [Section 5.3, Create PHP Scripts](https://cseanburns.net/WWW/systems-librarianship/16-installing-configuring-mysql.html)
+	- save and exit
+1. Test!
+```
+sudo php -f login.php
+sudo php -f index.php
+```
+
+Go back to external IP address in browser and add /opac.php to the URL. You should see the basic OPAC!
+
+_Code to create login.php and modify permissions/ownership_
+```
+cd /var/www/html/
+sudo touch login.php
+sudo chmod 640 login.php
+sudo chown :www-data login.php
+ls -l login.php
+```
+
+_Content for login.php file_
+```
+<?php // login.php
+$db_hostname = "localhost";
+$db_database = "opacdb";
+$db_username = "user1";
+$db_password = "XXXXXXXXX";
+?>
+```
+
+***I did it!***
