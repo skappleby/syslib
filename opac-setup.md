@@ -13,6 +13,7 @@ Related to this, pay attention to syntax! Small errors like forgetting punctuati
 
 When everything works, you're really just telling the computer where to go to look for stuff and how you want it displayed to the user.
 
+---
 It's kind of fascinating to see how a database search interface works in an
 extremely simplified way.
 Obviously, a real OPAC is going to be
