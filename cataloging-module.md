@@ -32,8 +32,8 @@ reads *AllowOverride All*
   Require all granted
 </Directory>
 ```
-
 And follow the other steps in [Dr. Burns' text](https://cseanburns.net/WWW/systems-librarianship/16.8-basic-opac-admin.html).
+
 ---
 
 I'm really starting to get a sense of the way 
