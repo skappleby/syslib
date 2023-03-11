@@ -2,7 +2,7 @@
 
 _Assignment Week 9_
 
-*Reminder: syntax and directory location are important*
+**Reminder: syntax and directory location are important**
 
 This week placed more emphasis on the way different pages interact with each other.
 We made a basic html form so we could enter data
@@ -23,8 +23,8 @@ Then we edit the config file in nano
 ```
 sudo nano /etc/apache2/apache2.conf
 ```
-And edit the stanza below so that *AllowOverride None*
-reads *AllowOverride All*
+And edit the stanza below so that **AllowOverride None**
+reads **AllowOverride All**
 ```
 <Directory /var/www/>
   Options Indexes FollowSymLinks
