@@ -1,4 +1,4 @@
-#WordPress Install
+# WordPress Install
 
 Notes on the info and processes from this week
 
