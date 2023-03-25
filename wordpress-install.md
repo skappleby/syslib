@@ -39,3 +39,6 @@ I still feel a little like I'm just tracing the lines
 that someone else drew, but maybe that's how I learn this?
 I do feel like I'm understanding more and it's exciting
 to not be so anxious about what I'm doing.
+
+I'm also just a tiny bit proud of the wordpress site
+for the [Troy McClure Memorial Library](http://34.85.146.164/wordpress/).
