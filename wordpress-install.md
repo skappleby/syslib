@@ -26,7 +26,7 @@ It was this important little bit:
 ```
 sudo chown -R www-data:www-data *
 ```
-I ran that from my base directory, `/var/www/html/wordpress',
+I ran that from my base directory, `/var/www/html/wordpress`,
 and that allowed me to add images and install additional
 themes to my WP instance. Without that command, I kept getting
 errors that said the system couldn't create a new directory.
