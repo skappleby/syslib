@@ -88,7 +88,7 @@ which explains the last 2 commands.
 
 ---
 
-## Omeka is here!
+### Omeka is here!
 
 Access and activate the Omeka instance by
 going to **http://my-ip-address/omeka** and 
