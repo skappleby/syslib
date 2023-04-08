@@ -1,0 +1,18 @@
+## Installing a new VM using PuTTY (again)
+
+[This YouTube video is super helpful](https://www.youtube.com/watch?v=fmh94mNQHQc)
+
+Open PuTTYgen and click **Generate**
+then move the mouse around per the directions
+to generate a key pair.
+
+**Key comment:** is actually the user name
+we'll use to connect to the VM, so change 
+it to something that makes sense in this context.
+
+Click **Save private key** and save
+without a passphrase.
+
+Copy the public key text and add it
+to the VM instance:
+- go to VM instance details and click **Edit**
