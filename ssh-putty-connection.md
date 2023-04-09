@@ -31,3 +31,16 @@ file associated with the VM and double-click
 to add.
 
 Click **Open** and login as the user.
+
+---
+
+I had to go through these steps 
+when I created a new virtual machine to 
+do the Koha install, so I figured it was best
+to document it this time so I don't
+forget whenever I have to do it again.
+
+Once I sorted this out, the Koha install
+went just fine. It was just a matter of reading
+[Dr. Burns' directions](https://cseanburns.net/WWW/systems-librarianship/20-install-koha.html)
+and following the [Koha documentation](https://koha-community.org/manual//22.11/en/html/index.html).
