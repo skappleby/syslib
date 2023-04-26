@@ -1,6 +1,6 @@
-#Library Site Architecture
+# Library Site Architecture
 
-##or: Lessons Learned
+## or: Lessons Learned
 
 _The Final Assignment_
 
@@ -48,7 +48,7 @@ and follow the [Reset Your Password](https://wordpress.org/documentation/article
 documentation from WP. It was surprisingly easy for the amount
 of stress I felt in the lead up! But it would've
 been even easier if I'd just recorded my credentials
-consistently.¯\_(ツ)_/¯
+consistently. Sigh.
 
 3. I can do this!
 	- As intimidating as some of this feels,
